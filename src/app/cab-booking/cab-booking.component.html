@@ -1,0 +1,115 @@
+<div id="content">
+  <div class="row">
+    <article class="col-sm-12 col-md-12 col-lg-12">
+      <header>
+        <h1 style="text-align: center">Week Roster</h1>
+      </header>
+      <div class="widget-body no-padding">
+        <form #sf (ngSubmit)="submit(sf.value)">
+          <fieldset>
+            <div class="form-group col-md-6">
+              <div class="row">
+                <section>
+                  <label for="date">Date:</label>
+                  <input
+                    class="form-control"
+                    style="margin-left: 100px"
+                    id="date"
+                    name="date"
+                    type="date"
+                    [(ngModel)]="rosterModel.tripDate"
+                    #date="ngModel"
+                    required
+                  />
+                </section>
+              </div>
+            </div>
+          </fieldset>
+          &nbsp;
+          <footer style="margin-left: 50px">
+            <button type="submit" (click)="click(date)">Select Roster</button>
+            &nbsp;
+            <button type="button" (click)="back()">Back</button>
+          </footer>
+        </form>
+      </div>
+      <br />
+      <table class="table" *ngIf="rosterModel.tripDate">
+        <tbody>
+          <tr class="table-primary">
+            <th scope="row">Date</th>
+            <td>{{ rosterModel.tripDate }}</td>
+            <td>{{ rosterModel.tripDate }}</td>
+            <td>{{ rosterModel.tripDate }}</td>
+            <td>{{ rosterModel.tripDate }}</td>
+            <td>{{ rosterModel.tripDate }}</td>
+            <td>{{ rosterModel.tripDate }}</td>
+            <td>{{ rosterModel.tripDate }}</td>
+          </tr>
+          <tr class="table-dark">
+            <th scope="row">Time</th>
+            <td>
+              <select>
+                <option value="1">7:00am</option>
+                <option value="2">7:00am</option>
+                <option value="na">NA</option>
+              </select>
+            </td>
+            <td>
+              <select>
+                <option value="1">7:00am</option>
+                <option value="2">7:00am</option>
+                <option value="na">NA</option>
+              </select>
+            </td>
+            <td>
+              <select>
+                <option value="1">7:00am</option>
+                <option value="2">7:00am</option>
+                <option value="na">NA</option>
+              </select>
+            </td>
+            <td>
+              <select>
+                <option value="1">7:00am</option>
+                <option value="2">7:00am</option>
+                <option value="na">NA</option>
+              </select>
+            </td>
+            <td>
+              <select>
+                <option value="1">7:00am</option>
+                <option value="2">7:00am</option>
+                <option value="na">NA</option>
+              </select>
+            </td>
+            <td>
+              <select>
+                <option value="1">7:00am</option>
+                <option value="2">7:00am</option>
+                <option value="na">NA</option>
+              </select>
+            </td>
+            <td>
+              <select>
+                <option value="1">7:00am</option>
+                <option value="2">7:00am</option>
+                <option value="na">NA</option>
+              </select>
+            </td>
+          </tr>
+        </tbody>
+        <br />
+        <footer>
+          <button type="submit" (click)="click(date)">Book</button> &nbsp;
+          <button type="reset">Reset</button>
+        </footer>
+      </table>
+      <!-- <ng-aside #NgAside [title]="Cab Booking" [cancelButtonTitle]="'Cancel'" [submitButtonTitle]="'Save'"
+  [closeOnEscape]="false" [showOverlay]="true" [widthClass]="'width80'" [showDefaultHeader]="true"
+  [showDefaultFooter]="false">
+  <ng-template appCabBookingAside></ng-template>
+</ng-aside> -->
+    </article>
+  </div>
+</div>
